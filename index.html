@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <p>Weather App</p>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+        <!-- Search Bar -->
+        <div class="searchBar">
+            <input type="text" id="myInput" onkeydown="logValue(event)">
+        </div>
+
+        <!-- City Name -->
+        <div class="cityName">
+            <h1 class="city">Search For City Weather</h1>
+        </div>
+
+
+
+        
+        <!-- Weather Stats -->
+        <div class="weatherStats">
+            <h3 class="wordTemp"></h3>
+            <p class="temp"></p>
+            <h3 class="wordFeelsLike"></h3>
+            <p class="feelsLike"></p>
+            <h3 class="wordTempMin"></h3>
+            <p class="tempMin"></p>
+            <h3 class="wordTempMax"></h3>
+            <p class="tempMax"></p>
+            <h3 class="wordWindSpeed"></h3>
+            <p class="windSpeed"></p>
+            <h3 class="wordHumi"></h3>
+            <p class="humi"></p>
+            <h3 class="wordLong"></h3>
+            <p class="long"></p>
+            <h3 class="wordLat"></h3>
+            <p class="lat"></p>
+        </div>
+
+
+
+
+        <!-- Maps -->
+        <div class="mapSection">
+            <div class="mappy"></div>
+        </div> 
+
+
+
+
+        <!-- Weather Desc -->
+        <div class="weatherDesc">
+            <h3 class="wordDesc"></h3>
+            <p class="desc"></p>
+        </div>    
+        
+        
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
