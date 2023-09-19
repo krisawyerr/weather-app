@@ -82,7 +82,9 @@ function logValue(event) {
             <!-- Weather Desc -->
             <div class="weatherDesc" style="box-shadow: 0px 0px 10px #001f54;">
                 <p class="desc"></p>
-            </div>  `;
+            </div>`;
+
+            let feelingLike = data.main.temp === data.main.feels_like ? `.` : `, but it feels like ${Math.round(data.main.feels_like)}°F.`
 
             document.querySelector(".wordFeelsLike").innerHTML = 'Feels Like:';
             document.querySelector(".wordTempMin").innerHTML = 'Daily Low:';
@@ -96,7 +98,7 @@ function logValue(event) {
             document.querySelector(".tempMin").innerHTML = `${Math.round(data.main.temp_min)}°F`;
             document.querySelector(".tempMax").innerHTML = `${Math.round(data.main.temp_max)}°F`;
             document.querySelector(".windSpeed").innerHTML = `${Math.round(data.wind.speed)} mph`;
-            document.querySelector(".desc").innerHTML = `${data.name} is currently ${Math.round(data.main.temp)}°F, but it feels like ${Math.round(data.main.feels_like)}°F. Today is going to give you a high of ${data.main.temp_max}°F and a low of ${Math.round(data.main.temp_min)}°F. With a humidity of ${data.main.humidity}%, be ready to ${humDesc}. The wind speed is ${Math.round(data.wind.speed)} mph, so ${windDesc}.`;
+            document.querySelector(".desc").innerHTML = `${data.name} is currently ${Math.round(data.main.temp)}°F${feelingLike} Today is going to give you a high of ${Math.round(data.main.temp_max)}°F and a low of ${Math.round(data.main.temp_min)}°F. With a humidity of ${data.main.humidity}%, be ready to ${humDesc}. The wind speed is ${Math.round(data.wind.speed)} mph, so ${windDesc}.`;
             document.querySelector(".city").innerHTML = `${data.name}, ${data.sys.country}`;
             document.querySelector(".mappy").innerHTML = `<iframe width='1200px' height='400px' src="https://api.mapbox.com/styles/v1/krisawyerr/clmodveur01vt01ragti210rz.html?title=false&access_token=${mapKey}&zoomwheel=false#11/${mapLat}/${mapLon}" title="Satellite Streets" style="border:none;"></iframe>`
         }
