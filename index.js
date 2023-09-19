@@ -29,6 +29,7 @@ function logValue(event) {
                 humDesc = 'consistently breaking a sweat'
             }
 
+
             let windDesc
             if (data.wind.speed < 12) {
                 windDesc = 'the wind is gentle and barely noticeable'
@@ -102,11 +103,6 @@ function logValue(event) {
             document.querySelector(".city").innerHTML = `${data.name}, ${data.sys.country}`;
             document.querySelector(".mappy").innerHTML = `<iframe width='1200px' height='400px' src="https://api.mapbox.com/styles/v1/krisawyerr/clmodveur01vt01ragti210rz.html?title=false&access_token=${mapKey}&zoomwheel=false#11/${mapLat}/${mapLon}" title="Satellite Streets" style="border:none;"></iframe>`
         }
-        
         checkCoin();
     }
-
-   
-
-    
 }
